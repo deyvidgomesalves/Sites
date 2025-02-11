@@ -1,0 +1,185 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Fundo Animado */
+body {
+    background: linear-gradient(135deg, #ff512f, #dd2476);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    animation: gradient-animation 6s infinite alternate;
+}
+
+/* Animação de Fundo */
+@keyframes gradient-animation {
+    0% { background: linear-gradient(135deg, #ff512f, #dd2476); }
+    100% { background: linear-gradient(135deg, #ff7300, #ff3300); }
+}
+
+.container, .dashboard-container {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 25px;
+    border-radius: 12px;
+    width: 400px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    animation: fade-in 1.5s ease-in-out;
+}
+
+/* Animação de Entrada */
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #ff7300;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #ff512f;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #ff7300;
+    box-shadow: 0 0 5px #ff7300;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Adiciona espaçamento entre os botões */
+    margin-top: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #ff7300;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff3300;
+    transform: scale(1.05);
+}
+
+button.full-width {
+    width: 100%;
+}
+
+button.half-width {
+    width: 48%;
+}
+
+/* Mensagem de Validação */
+#mensagem, #login-mensagem, #recover-mensagem {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: lightgreen;
+    animation: fade-in 0.5s ease-in-out;
+}
+
+/* Dashboard Styles */
+.dashboard-container {
+    width: 80%;
+    height: auto;
+    padding: 20px;
+}
+
+.dashboard-container header {
+    margin-bottom: 20px;
+}
+
+.dashboard-container section {
+    display: none;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.dashboard-container section:target {
+    display: block;
+}
+
+.dashboard-container section h2 {
+    margin-bottom: 10px;
+}
+
+.dashboard-container .menu-content,
+.dashboard-container .pedidos-content,
+.dashboard-container .info-content,
+.dashboard-container .avaliacoes-content,
+.dashboard-container .admin-content {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 10px 0;
+}
+
+footer nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+footer nav ul li {
+    display: inline;
+}
+
+footer nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+footer nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
