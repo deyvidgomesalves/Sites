@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Pizzaria 🍕</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="fade-in">🍕 Cadastro de Pizzaria</h1>
+        <p class="subtitle">Cadastre sua pizzaria e entre no mundo dos sabores incríveis!</p>
+
+        <form id="form">
+            <div class="input-group">
+                <label for="nome">Nome da Pizzaria</label>
+                <input type="text" id="nome" placeholder="Ex: Pizzaria Napoli" required>
+            </div>
+
+            <div class="input-group">
+                <label for="endereco">Endereço</label>
+                <input type="text" id="endereco" placeholder="Rua dos Sabores, 123" required>
+            </div>
+
+            <div class="input-group">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" placeholder="21999999999" required>
+            </div>
+
+            <div class="input-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="contato@pizzaria.com" required>
+            </div>
+
+            <div class="input-group">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" placeholder="Senha" required>
+            </div>
+
+            <div class="button-group">
+                <button type="submit">Cadastrar</button>
+                <button type="button" id="login-button">Login</button>
+            </div>
+        </form>
+
+        <div id="mensagem"></div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
