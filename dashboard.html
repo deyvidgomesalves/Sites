@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Pizzaria 🍕</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard-styles.css">
+</head>
+<body>
+    <div class="menu-icon" onclick="toggleSidebar()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="close-btn" onclick="toggleSidebar()">&times;</a>
+        <a href="menu.html">Menu</a>
+        <a href="pedidos.html">Pedidos</a>
+        <a href="motoboy.html">Motoboys</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="estoque.html">Estoque</a>
+        <a href="promocoes.html">Promoções</a>
+        <a href="avaliacoes.html">Avaliações</a>
+        <a href="relatorio.html">Relatórios</a>
+    </div>
+
+    <div class="content">
+        <header>
+            <h1>Dashboard da Pizzaria</h1>
+            <p>Bem-vindo, Admin!</p>
+        </header>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("sidebar");
+            if (sidebar.style.width === "250px") {
+                sidebar.style.width = "0";
+            } else {
+                sidebar.style.width = "250px";
+            }
+        }
+    </script>
+</body>
+</html>

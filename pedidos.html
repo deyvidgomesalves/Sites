@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Pedidos 🍕</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard-styles.css">
+    <link rel="stylesheet" href="pedidos-styles.css">
+</head>
+<body>
+    <div class="menu-icon" onclick="toggleSidebar()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="close-btn" onclick="toggleSidebar()">&times;</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="menu/menu.html">Menu</a>
+        <a href="motoboy/motoboy.html">Motoboys</a>
+        <a href="clientes/clientes.html">Clientes</a>
+        <a href="estoque/estoque.html">Estoque</a>
+        <a href="promocoes/promocoes.html">Promoções</a>
+        <a href="avaliacoes/avaliacoes.html">Avaliações</a>
+        <a href="relatorio/relatorio.html">Relatórios</a>
+    </div>
+
+    <div class="content">
+        <header>
+            <h1>Gestão de Pedidos</h1>
+        </header>
+        <div class="pedidos-content">
+            <form id="pedidos-form">
+                <div class="input-group">
+                    <label for="pedido-cliente">Cliente</label>
+                    <input type="text" id="pedido-cliente" placeholder="Nome do Cliente" required>
+                </div>
+                <div class="input-group">
+                    <label for="pedido-itens">Itens do Pedido</label>
+                    <textarea id="pedido-itens" placeholder="Nome da Pizza, Quantidade..." required></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="pedido-total">Total</label>
+                    <input type="number" id="pedido-total" placeholder="Total do Pedido" required>
+                </div>
+                <div class="input-group">
+                    <label for="pedido-pagamento">Forma de Pagamento</label>
+                    <input type="text" id="pedido-pagamento" placeholder="Dinheiro, Cartão, Pix..." required>
+                </div>
+                <div class="input-group">
+                    <label for="pedido-status">Status</label>
+                    <input type="text" id="pedido-status" placeholder="Em preparo, A caminho, Entregue..." required>
+                </div>
+                <div class="input-group">
+                    <label for="pedido-endereco">Endereço de Entrega</label>
+                    <input type="text" id="pedido-endereco" placeholder="Rua, Número, Bairro..." required>
+                </div>
+                <div class="input-group">
+                    <label for="pedido-comentarios">Comentários do Cliente</label>
+                    <textarea id="pedido-comentarios" placeholder="Informações adicionais sobre o pedido"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="pedido-observacoes">Observações do Sistema</label>
+                    <textarea id="pedido-observacoes" placeholder="Status de preparo, tempo estimado, etc."></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="pedido-metodo-pagamento">Método de Pagamento</label>
+                    <input type="text" id="pedido-metodo-pagamento" placeholder="Online ou na entrega" required>
+                </div>
+                <button type="submit">Adicionar Pedido</button>
+            </form>
+            <div id="pedidos-lista"></div>
+        </div>
+    </div>
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("sidebar");
+            if (sidebar.style.width === "250px") {
+                sidebar.style.width = "0";
+            } else {
+                sidebar.style.width = "250px";
+            }
+        }
+    </script>
+</body>
+</html>

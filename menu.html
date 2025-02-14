@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu da Pizzaria 🍕</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard-styles.css">
+    <link rel="stylesheet" href="menu-styles.css">
+</head>
+<body>
+    <div class="menu-icon" onclick="toggleSidebar()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="close-btn" onclick="toggleSidebar()">&times;</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="pedidos/pedidos.html">Pedidos</a>
+        <a href="motoboy/motoboy.html">Motoboys</a>
+        <a href="clientes/clientes.html">Clientes</a>
+        <a href="estoque/estoque.html">Estoque</a>
+        <a href="promocoes/promocoes.html">Promoções</a>
+        <a href="avaliacoes/avaliacoes.html">Avaliações</a>
+        <a href="relatorio/relatorio.html">Relatórios</a>
+    </div>
+
+    <div class="content">
+        <header>
+            <h1>Menu da Pizzaria</h1>
+        </header>
+        <div class="menu-content">
+            <form id="menu-form">
+                <div class="input-group">
+                    <label for="pizza-nome">Nome da Pizza</label>
+                    <input type="text" id="pizza-nome" placeholder="Ex: Margherita" required>
+                </div>
+                <div class="input-group">
+                    <label for="pizza-descricao">Descrição</label>
+                    <textarea id="pizza-descricao" placeholder="Molho de tomate, mussarela, manjericão..." required></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="pizza-ingredientes">Ingredientes</label>
+                    <textarea id="pizza-ingredientes" placeholder="Tomate, Mussarela, Manjericão..." required></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="pizza-preco">Preço</label>
+                    <input type="number" id="pizza-preco" placeholder="19.99" required>
+                </div>
+                <div class="input-group">
+                    <label for="pizza-categoria">Categoria</label>
+                    <input type="text" id="pizza-categoria" placeholder="Tradicional, Especial..." required>
+                </div>
+                <div class="input-group">
+                    <label for="pizza-foto">Foto</label>
+                    <input type="text" id="pizza-foto" placeholder="URL da foto da pizza" required>
+                </div>
+                <div class="input-group">
+                    <label for="pizza-tipo-massa">Tipo de Massa</label>
+                    <input type="text" id="pizza-tipo-massa" placeholder="Fina, Grossa, Recheada..." required>
+                </div>
+                <div class="input-group">
+                    <label for="pizza-tamanho">Tamanho</label>
+                    <input type="text" id="pizza-tamanho" placeholder="Pequena, Média, Grande..." required>
+                </div>
+                <div class="input-group">
+                    <label for="pizza-calorias">Calorias</label>
+                    <input type="number" id="pizza-calorias" placeholder="Calorias da pizza" required>
+                </div>
+                <div class="input-group">
+                    <label for="pizza-data-criacao">Data de Criação</label>
+                    <input type="date" id="pizza-data-criacao" required>
+                </div>
+                <div class="input-group">
+                    <label for="pizza-estoque-ingredientes">Controle de Estoque de Ingredientes</label>
+                    <textarea id="pizza-estoque-ingredientes" placeholder="Quantidade disponível de cada ingrediente" required></textarea>
+                </div>
+                <button type="submit">Adicionar Pizza</button>
+            </form>
+            <div id="menu-lista"></div>
+        </div>
+    </div>
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("sidebar");
+            if (sidebar.style.width === "250px") {
+                sidebar.style.width = "0";
+            } else {
+                sidebar.style.width = "250px";
+            }
+        }
+    </script>
+</body>
+</html>

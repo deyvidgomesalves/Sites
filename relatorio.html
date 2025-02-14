@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios da Pizzaria 🍕</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard-styles.css">
+    <link rel="stylesheet" href="relatorios-styles.css">
+</head>
+<body>
+    <div class="menu-icon" onclick="toggleSidebar()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="close-btn" onclick="toggleSidebar()">&times;</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="menu/menu.html">Menu</a>
+        <a href="pedidos/pedidos.html">Pedidos</a>
+        <a href="motoboy/motoboy.html">Motoboys</a>
+        <a href="clientes/clientes.html">Clientes</a>
+        <a href="estoque/estoque.html">Estoque</a>
+        <a href="promocoes/promocoes.html">Promoções</a>
+        <a href="avaliacoes/avaliacoes.html">Avaliações</a>
+    </div>
+
+    <div class="content">
+        <header>
+            <h1>Relatórios da Pizzaria</h1>
+        </header>
+        <div class="relatorios-content">
+            <form id="relatorios-form">
+                <div class="input-group">
+                    <label for="relatorio-tipo">Tipo de Relatório</label>
+                    <select id="relatorio-tipo" required>
+                        <option value="vendas">Relatório de Vendas</option>
+                        <option value="clientes">Relatório de Clientes</option>
+                        <option value="estoque">Relatório de Estoque</option>
+                        <option value="financeiro">Relatório Financeiro</option>
+                        <option value="motoboys">Relatório de Motoboys</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="relatorio-periodo">Período</label>
+                    <input type="text" id="relatorio-periodo" placeholder="Ex: Janeiro 2023" required>
+                </div>
+                <div class="input-group">
+                    <label for="relatorio-descricao">Descrição</label>
+                    <textarea id="relatorio-descricao" placeholder="Descrição do Relatório" required></textarea>
+                </div>
+                <button type="submit">Gerar Relatório</button>
+            </form>
+            <div id="relatorios-lista"></div>
+        </div>
+    </div>
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("sidebar");
+            if (sidebar.style.width === "250px") {
+                sidebar.style.width = "0";
+            } else {
+                sidebar.style.width = "250px";
+            }
+        }
+    </script>
+</body>
+</html>

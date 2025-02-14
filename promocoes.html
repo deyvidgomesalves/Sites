@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Promoções 🍕</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard-styles.css">
+    <link rel="stylesheet" href="promocoes-styles.css">
+</head>
+<body>
+    <div class="menu-icon" onclick="toggleSidebar()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="close-btn" onclick="toggleSidebar()">&times;</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="menu/menu.html">Menu</a>
+        <a href="pedidos/pedidos.html">Pedidos</a>
+        <a href="motoboy/motoboy.html">Motoboys</a>
+        <a href="clientes/clientes.html">Clientes</a>
+        <a href="estoque/estoque.html">Estoque</a>
+        <a href="avaliacoes/avaliacoes.html">Avaliações</a>
+        <a href="relatorio/relatorio.html">Relatórios</a>
+    </div>
+
+    <div class="content">
+        <header>
+            <h1>Gestão de Promoções</h1>
+        </header>
+        <div class="promocoes-content">
+            <form id="promocoes-form">
+                <div class="input-group">
+                    <label for="promocao-nome">Nome da Promoção</label>
+                    <input type="text" id="promocao-nome" placeholder="Nome da Promoção" required>
+                </div>
+                <div class="input-group">
+                    <label for="promocao-descricao">Descrição</label>
+                    <textarea id="promocao-descricao" placeholder="Descrição da Promoção" required></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="promocao-desconto">Desconto (%)</label>
+                    <input type="number" id="promocao-desconto" placeholder="Porcentagem de Desconto" required>
+                </div>
+                <div class="input-group">
+                    <label for="promocao-inicio">Data de Início</label>
+                    <input type="date" id="promocao-inicio" required>
+                </div>
+                <div class="input-group">
+                    <label for="promocao-fim">Data de Fim</label>
+                    <input type="date" id="promocao-fim" required>
+                </div>
+                <div class="input-group">
+                    <label for="promocao-condicoes">Condições</label>
+                    <textarea id="promocao-condicoes" placeholder="Condições da Promoção" required></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="promocao-codigo">Código da Promoção</label>
+                    <input type="text" id="promocao-codigo" placeholder="Código para Aplicar a Promoção" required>
+                </div>
+                <div class="input-group">
+                    <label for="promocao-publico-alvo">Público Alvo</label>
+                    <input type="text" id="promocao-publico-alvo" placeholder="Público Alvo da Promoção" required>
+                </div>
+                <div class="input-group">
+                    <label for="promocao-observacoes">Observações</label>
+                    <textarea id="promocao-observacoes" placeholder="Observações adicionais sobre a promoção"></textarea>
+                </div>
+                <button type="submit">Adicionar Promoção</button>
+            </form>
+            <div id="promocoes-lista"></div>
+        </div>
+    </div>
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("sidebar");
+            if (sidebar.style.width === "250px") {
+                sidebar.style.width = "0";
+            } else {
+                sidebar.style.width = "250px";
+            }
+        }
+    </script>
+</body>
+</html>

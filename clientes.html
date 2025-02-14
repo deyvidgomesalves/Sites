@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Clientes 🍕</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard-styles.css">
+    <link rel="stylesheet" href="clientes-styles.css">
+</head>
+<body>
+    <div class="menu-icon" onclick="toggleSidebar()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="close-btn" onclick="toggleSidebar()">&times;</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="menu/menu.html">Menu</a>
+        <a href="pedidos/pedidos.html">Pedidos</a>
+        <a href="motoboy/motoboy.html">Motoboys</a>
+        <a href="estoque/estoque.html">Estoque</a>
+        <a href="promocoes/promocoes.html">Promoções</a>
+        <a href="avaliacoes/avaliacoes.html">Avaliações</a>
+        <a href="relatorio/relatorio.html">Relatórios</a>
+    </div>
+
+    <div class="content">
+        <header>
+            <h1>Cadastro de Clientes</h1>
+        </header>
+        <div class="clientes-content">
+            <form id="clientes-form">
+                <div class="input-group">
+                    <label for="cliente-nome">Nome do Cliente</label>
+                    <input type="text" id="cliente-nome" placeholder="Nome do Cliente" required>
+                </div>
+                <div class="input-group">
+                    <label for="cliente-endereco">Endereço</label>
+                    <input type="text" id="cliente-endereco" placeholder="Endereço" required>
+                </div>
+                <div class="input-group">
+                    <label for="cliente-telefone">Telefone</label>
+                    <input type="tel" id="cliente-telefone" placeholder="Telefone" required>
+                </div>
+                <div class="input-group">
+                    <label for="cliente-email">E-mail</label>
+                    <input type="email" id="cliente-email" placeholder="E-mail" required>
+                </div>
+                <div class="input-group">
+                    <label for="cliente-preferencias">Preferências de Pizza</label>
+                    <textarea id="cliente-preferencias" placeholder="Tipo de massa, ingredientes preferidos"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="cliente-historico-pedidos">Histórico de Pedidos</label>
+                    <textarea id="cliente-historico-pedidos" placeholder="Pedidos anteriores e frequência"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="cliente-cartoes-fidelidade">Cartões de Fidelidade</label>
+                    <textarea id="cliente-cartoes-fidelidade" placeholder="Programa de pontos ou descontos"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="cliente-historico-avaliacoes">Histórico de Avaliações</label>
+                    <textarea id="cliente-historico-avaliacoes" placeholder="Comentários sobre pizzas ou entregas"></textarea>
+                </div>
+                <button type="submit">Cadastrar Cliente</button>
+            </form>
+            <div id="clientes-lista"></div>
+        </div>
+    </div>
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("sidebar");
+            if (sidebar.style.width === "250px") {
+                sidebar.style.width = "0";
+            } else {
+                sidebar.style.width = "250px";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Estoque 🍕</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard-styles.css">
+    <link rel="stylesheet" href="estoque-styles.css">
+</head>
+<body>
+    <div class="menu-icon" onclick="toggleSidebar()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="close-btn" onclick="toggleSidebar()">&times;</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="menu/menu.html">Menu</a>
+        <a href="pedidos/pedidos.html">Pedidos</a>
+        <a href="motoboy/motoboy.html">Motoboys</a>
+        <a href="clientes/clientes.html">Clientes</a>
+        <a href="promocoes/promocoes.html">Promoções</a>
+        <a href="avaliacoes/avaliacoes.html">Avaliações</a>
+        <a href="relatorio/relatorio.html">Relatórios</a>
+    </div>
+
+    <div class="content">
+        <header>
+            <h1>Controle de Estoque</h1>
+        </header>
+        <div class="estoque-content">
+            <form id="estoque-form">
+                <div class="input-group">
+                    <label for="estoque-ingrediente">Ingrediente</label>
+                    <input type="text" id="estoque-ingrediente" placeholder="Ingrediente" required>
+                </div>
+                <div class="input-group">
+                    <label for="estoque-quantidade">Quantidade</label>
+                    <input type="number" id="estoque-quantidade" placeholder="Quantidade" required>
+                </div>
+                <div class="input-group">
+                    <label for="estoque-preco">Preço</label>
+                    <input type="number" id="estoque-preco" placeholder="Preço" required>
+                </div>
+                <div class="input-group">
+                    <label for="estoque-fornecedor">Fornecedor</label>
+                    <input type="text" id="estoque-fornecedor" placeholder="Fornecedor" required>
+                </div>
+                <div class="input-group">
+                    <label for="estoque-validade">Validade</label>
+                    <input type="date" id="estoque-validade" required>
+                </div>
+                <div class="input-group">
+                    <label for="estoque-localizacao">Localização</label>
+                    <input type="text" id="estoque-localizacao" placeholder="Localização no depósito" required>
+                </div>
+                <div class="input-group">
+                    <label for="estoque-categoria">Categoria</label>
+                    <input type="text" id="estoque-categoria" placeholder="Categoria do ingrediente" required>
+                </div>
+                <div class="input-group">
+                    <label for="estoque-data-entrada">Data de Entrada</label>
+                    <input type="date" id="estoque-data-entrada" required>
+                </div>
+                <div class="input-group">
+                    <label for="estoque-observacoes">Observações</label>
+                    <textarea id="estoque-observacoes" placeholder="Observações adicionais sobre o ingrediente"></textarea>
+                </div>
+                <button type="submit">Adicionar Ingrediente</button>
+            </form>
+            <div id="estoque-lista"></div>
+        </div>
+    </div>
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("sidebar");
+            if (sidebar.style.width === "250px") {
+                sidebar.style.width = "0";
+            } else {
+                sidebar.style.width = "250px";
+            }
+        }
+    </script>
+</body>
+</html>
